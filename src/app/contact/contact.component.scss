@@ -1,0 +1,15 @@
+@import "../../styles.scss";
+
+.main {
+    padding: 2em;
+    color: white;
+    background-color: $main-accent-color;
+
+    a {
+        color: white;
+    }
+
+    .fab {
+        margin: 0 .5em .5em 0;
+    }
+}

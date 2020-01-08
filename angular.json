@@ -28,9 +28,21 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/@fortawesome/fontawesome-free/css/all.min.css",
+              "node_modules/jarallax/dist/jarallax.css",
+              "node_modules/@fullcalendar/core/main.min.css",
+              "node_modules/@fullcalendar/list/main.min.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jarallax/dist/jarallax.min.js",
+              "node_modules/jarallax/dist/jarallax-element.min.js",
+              "node_modules/jarallax/dist/jarallax-video.min.js",
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/moment/min/moment.min.js",
+              "node_modules/@fullcalendar/core/main.min.js",
+              "node_modules/@fullcalendar/list/main.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -122,8 +134,13 @@
               "devServerTarget": "rachel-kobernick-portfolio:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {}
         }
       }
-    }},
+    }
+  },
   "defaultProject": "rachel-kobernick-portfolio"
 }

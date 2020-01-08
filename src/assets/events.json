@@ -1,0 +1,33 @@
+{
+    "upcoming_events": [
+        {
+            "title": "Senior Recital",
+            "date": "2020-04-12",
+            "location": "Eastman School of Music, Hatch Recital Hall",
+            "link": "#"
+        },
+        {
+            "title": "Lesson",
+            "date": "2020-04-18",
+            "location": "Eastman School of Music, Hatch Recital Hall",
+            "link": "#"
+        },
+        {
+            "title": "Lesson",
+            "date": "2020-05-18",
+            "location": "Eastman School of Music, Hatch Recital Hall",
+            "link": "#"
+        },
+        {
+            "title": "Master Class",
+            "date": "2020-06-12",
+            "location": "POOS",
+            "link": "#"
+        },
+        {
+            "title": "Literally any other Event",
+            "date": "2020-04-13",
+            "location": "My Whole Entire Asshole"
+        }
+    ]
+}

@@ -1,0 +1,37 @@
+<div class="main container-fluid text-center">
+
+    <h1>Upcoming Events and Performances</h1>
+    <div class="main-row">
+        <div class="row">
+            <!-- Uncomment this once you get famous and have more than 1 event at a time -->
+            <!-- <div class="calendar-wrapper col-xl">
+                <div class="calendar-wrapper">
+                    <full-calendar #calendar
+                        defaultView="dayGridMonth"
+                        [plugins]="calendarPlugins"
+                        timeZone="local"
+                        [events]="events"
+                        (eventRender)="renderEvent($event)"
+                    ></full-calendar>
+                </div>
+            </div> -->
+            <div class="col-xl">
+                <div class="row">
+                    <div *ngFor="let event of events; let i = index;" class="col-offset-* event-card">
+                        <div class="container">
+                            <div class="row justify-content-between align-items-center">
+                                <h4 class="title">{{event.title}}</h4>
+                                <!-- Divider to avoid awkward spacing between date and title -->
+                                <div style="width: 2em;"></div> 
+                                <p class="date text-muted"><i>{{event.date}}</i></p>
+                            </div>
+                            <div class="row mt-1">
+                                <h6 class="location text-muted">{{event.location}}</h6>
+                                <a *ngIf="event.link != undefined" class="link" href="{{event.link}}" target="blank">Event Page</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+</div>
