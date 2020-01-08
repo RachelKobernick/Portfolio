@@ -8,10 +8,12 @@
     text-align: center;
 
     .main-row {
-        display: flex;
-        flex-direction: row;
+        // display: flex;
+        // flex-direction: row;
         justify-content: space-evenly;
         padding: 1em 0;
+        margin: 0 auto;
+        max-width: 1350px;
     }
 
     .calendar-wrapper {
@@ -32,13 +34,9 @@
             margin: 0;
         }
 
-        .title-row {
-            h4 {
-                display: inline;
-                margin-right: auto;
-            }
+        .when {
             p {
-                display: inline-block;
+                display: inline;
             }
         }
         .location {

@@ -9,9 +9,10 @@ $press-kit-display-break-size: 700px;
 
 .bg {
     background-color: black;
-    background-image: url('../../assets/pictures/background_black_and_white_blurred.jpg');
-    background-repeat: no-repeat;
-    background-size: contain;
+    // These are set via directive in HTML to allow for image to be pulled from assets
+    // background-image: url(/assets/pictures/background_black_and_white_blurred.jpg);
+    // background-repeat: no-repeat;
+    // background-size: contain;
     max-width: 1350px;
     height: max-content;
     width: 100%;

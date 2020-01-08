@@ -15,7 +15,7 @@
                     ></full-calendar>
                 </div>
             </div> -->
-            <div class="col-xl">
+            <div class="col-xl" id="eventCards">
                 <div class="row">
                     <div *ngFor="let event of events; let i = index;" class="col-offset-* event-card">
                         <div class="container">
@@ -23,7 +23,12 @@
                                 <h4 class="title">{{event.title}}</h4>
                                 <!-- Divider to avoid awkward spacing between date and title -->
                                 <div style="width: 2em;"></div> 
-                                <p class="date text-muted"><i>{{event.date}}</i></p>
+                                <div>
+                                    <div class="when">
+                                        <p class="date text-muted"><i>{{event.date}}</i></p>
+                                        <p *ngIf="event.time" class="time text-muted"><i> at {{event.time}}</i></p>
+                                    </div>
+                                </div>
                             </div>
                             <div class="row mt-1">
                                 <h6 class="location text-muted">{{event.location}}</h6>

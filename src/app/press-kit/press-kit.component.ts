@@ -13,5 +13,15 @@ export class PressKitComponent implements OnInit {
   ngOnInit() {
     jarallax(document.querySelectorAll('.jarallax'));
   }
-
+  getBackGroundImageURL() {
+    return "background-image: url('/assets/pictures/background_black_and_white_blurred.jpg')" +
+    "background-color: black; " +
+    "background-repeat: no-repeat;" +
+    "background-size: contain;" +
+    "max-width: 1350px;" +
+    "height: max-content;" +
+    "width: 100%;" +
+    "margin: 0 auto;"
+    // return "url('/assets/pictures/background_black_and_white_blurred.jpg')";
+  }
 }

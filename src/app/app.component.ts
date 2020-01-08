@@ -10,5 +10,4 @@ export class AppComponent {
   ngOnInit() {
     jarallax(document.querySelectorAll('.jarallax'));
   }
-  // title = 'rachel-kobernick-portfolio';
 }

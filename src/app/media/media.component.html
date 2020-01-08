@@ -36,7 +36,7 @@
         <div class="carousel-inner">
             <!-- Create Slide for Each picture in /assets/pictures -->
             <div *ngFor="let image of picture_names; let i = index;" [ngClass]="i == 0 ? 'carousel-item carousel-image active' : 'carousel-item carousel-image'">
-                <img src="../../assets/pictures/{{image}}" alt="{{image}}">
+                <img src="assets/pictures/{{image}}" alt="{{image}}">
             </div>
         </div>
         <a href="#carousel-indicators" class="carousel-control-prev" role="button" data-slide="prev">

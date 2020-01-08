@@ -1,8 +1,12 @@
 import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
-import * as events_data from "../../assets/events.json";
+
+import events_data from '../../assets/events.json';
+
+// import * as events_data from "~/assets/events.json";
 import dayGridPlugin from "@fullcalendar/daygrid";
 import { FullCalendarComponent } from '@fullcalendar/angular';
 import moment from "moment";
+
 // JQuery
 declare var $: any;
 
@@ -16,8 +20,10 @@ export class EventsComponent implements AfterViewInit {
   @ViewChild('calendar', {static: false}) calendarComponent: FullCalendarComponent;
   
   calendarPlugins = [dayGridPlugin]
+  // public Events: any = events_data;
   public events = [];
   firstDate = "2020-04-01";
+
   
   ngAfterViewInit() {
     // Uncomment for calendar events
@@ -44,11 +50,8 @@ export class EventsComponent implements AfterViewInit {
     console.log('clicked', event)
   }
   
-  constructor() {
+  constructor() {    
     this.events = events_data.upcoming_events;
-
-    // Scroll Calendar to next upcoming event
-
   }
 
 

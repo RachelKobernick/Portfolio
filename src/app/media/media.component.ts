@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import * as media_data from '../../assets/media.json';
+import media_data from '../../assets/media.json';
 
 @Component({
   selector: 'media',
@@ -12,11 +12,11 @@ export class MediaComponent implements OnInit {
   video_links = [];
 
   constructor() {
+  }
+  
+  ngOnInit() {
     this.video_links = media_data.video_links;
     this.picture_names = media_data.picture_names;
-  }
-
-  ngOnInit() {
   }
 
 }
