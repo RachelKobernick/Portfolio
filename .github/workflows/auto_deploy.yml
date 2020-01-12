@@ -24,6 +24,7 @@ jobs:
       run: |
         echo "Auto-Deploying Rachel's Portfolio to ng-pages"
         npm ci
+        npm i --save angular-cli-ghpages@^0.6.2
         ng deploy --base-href="/Portfolio/" --repo=https://github.com/RachelKobernick/Portfolio.git --name="RyanRacicot" --email=ryanmracicot@gmail.com
       env:
         CI: true
