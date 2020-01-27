@@ -21,7 +21,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           npm install
-          npm run ng -- deploy --base-href=/Portfolio/ --name="RyanRacicot" --email=ryanmracicot@gmail.com --no-silent
+          npm run ng -- deploy --no-silent
 #       - name: Build and Deploy
 #         uses: JamesIves/github-pages-deploy-action@releases/v2
 #         env:
