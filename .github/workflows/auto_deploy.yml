@@ -28,4 +28,4 @@ jobs:
           ACCESS_TOKEN: '61be3ebf9635203db3e7a41a30a826d799f5b190'
           BASE_BRANCH: master
           BRANCH: gh-pages
-          FOLDER: dist
+          FOLDER: rachel-kobernick-portfolio
