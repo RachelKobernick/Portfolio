@@ -1,0 +1,17 @@
+{
+    "upcoming_events": [
+        {
+            "title": "Senior Recital",
+            "date": "2020-04-12",
+            "time": "1:00pm - 5:00pm",
+            "location": "Eastman School of Music, Hatch Recital Hall",
+            "link": "#"
+        },
+        {
+            "title": "FEO Competition",
+            "date": "2020-01-22",
+            "location": "Eastman School of Music, Kilbourn Hall",
+            "link": "#"
+        }
+    ]
+}
