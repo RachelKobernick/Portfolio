@@ -1,7 +1,7 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": "./Portfolio/",
+    "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
