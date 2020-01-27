@@ -16,16 +16,17 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 12.12.0
-          
-      - name: Install
+      - name: Deploy
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           npm install
-          npm run build
-        
-      - name: Build and Deploy
-        uses: JamesIves/github-pages-deploy-action@releases/v2
-        env:
-          ACCESS_TOKEN: '61be3ebf9635203db3e7a41a30a826d799f5b190'
-          BASE_BRANCH: master
-          BRANCH: gh-pages
-          FOLDER: dist/rachel-kobernick-portfolio
+          npm run ng -- deploy --base-href=/Portfolio/ --name="RyanRacicot" --email=ryanmracicot@gmail.com --no-silent
+#       - name: Build and Deploy
+#         uses: JamesIves/github-pages-deploy-action@releases/v2
+#         env:
+#           ACCESS_TOKEN: '61be3ebf9635203db3e7a41a30a826d799f5b190'
+#           BASE_BRANCH: master
+#           BRANCH: gh-pages
+#           FOLDER: dist/rachel-kobernick-portfolio
+#           BUILD_SCRIPT: npm install && npm run build -- --prod
