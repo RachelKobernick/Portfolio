@@ -31,6 +31,7 @@ jobs:
       - name: Force Rebuild
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  
+          ACCESS_TOKEN: '61be3ebf9635203db3e7a41a30a826d799f5b190'
         run: |
           git config --global user.email "ryanmracicot@gmail.com"
           git config --global user.name "RyanRacicot-AutoDeploy"
