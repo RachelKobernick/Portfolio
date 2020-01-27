@@ -18,6 +18,9 @@ jobs:
         env:
           GITHUB_TOKEN: '61be3ebf9635203db3e7a41a30a826d799f5b190'
         run: |
-          npm install -g @angular/cli@next
+          cd src
+          npm install
+          cd ..
+          npm install @angular/cli@next
           ng add angular-cli-ghpages
           ng deploy --no-silent --name="AutoDeploy" --email="ryanmracicot@gmail.com"
