@@ -18,7 +18,7 @@ jobs:
           node-version: 12.12.0
       - name: Deploy
         env:
-          ACCESS_TOKEN: '61be3ebf9635203db3e7a41a30a826d799f5b190'
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           npm install
           npm run ng -- deploy --base-href=/Portfolio/ --name="RyanRacicot" --email=ryanmracicot@gmail.com --no-silent
