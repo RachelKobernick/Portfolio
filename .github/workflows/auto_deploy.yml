@@ -30,5 +30,7 @@ jobs:
           ref: gh-pages
       - name: Force Rebuild    
         run: |
+          git config --global user.email "ryanmracicot@gmail.com"
+          git config --global user.name "RyanRacicot-AutoDeploy"
           git commit -m 'Force rebuild of deployed site' --allow-empty
           
