@@ -10,21 +10,20 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [8.x, 10.x, 12.x]
-
     steps:
-    - uses: actions/checkout@v1
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
-      with:
-        node-version: ${{ matrix.node-version }}
-    - name: npm install, compile, and deploy to ng-pages branch
-      run: |
-        echo "Auto-Deploying Rachel's Portfolio to ng-pages"
-        npm install
-        npm i --save angular-cli-ghpages@^0.6.2
-        ng deploy --base-href="/Portfolio/" --repo=https://github.com/RachelKobernick/Portfolio.git --name="RyanRacicot" --email=ryanmracicot@gmail.com
-      env:
-        CI: true
+      - name: Checkout
+        uses: actions/checkout@v2
+        
+      - name: Use Node.js 12.x
+        env:
+          GITHUB_TOKEN: '61be3ebf9635203db3e7a41a30a826d799f5b190'
+        run: |
+          cd src
+          npm install --silent
+          npm run build
+          cd dist
+          npm link
+          cd ..
+          npm install -g @angular/cli@next
+          ng add angular-cli-ghpages
+          ng deploy --no-silent --name="AutoDeploy" --email="ryanmracicot@gmail.com"
