@@ -19,6 +19,8 @@ jobs:
       - name: Deploy
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BASE_BRANCH: master
+          BRANCH: gh-pages
         run: |
           npm install
           npm run ng -- deploy --no-silent
