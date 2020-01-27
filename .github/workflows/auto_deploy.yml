@@ -31,5 +31,4 @@ jobs:
       - name: Force Rebuild    
         run: |
           git commit -m 'Force rebuild of deployed site' --allow-empty
-          git commit 
           
