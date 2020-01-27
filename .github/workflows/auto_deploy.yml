@@ -16,6 +16,11 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 12.12.0
+          
+      - name: Install
+        run: |
+          npm install
+          npm run build
         
       - name: Build and Deploy
         uses: JamesIves/github-pages-deploy-action@releases/v2
@@ -24,4 +29,3 @@ jobs:
           BASE_BRANCH: master
           BRANCH: gh-pages
           FOLDER: dist/rachel-kobernick-portfolio
-          BUILD_SCRIPT: npm install && npm run build -- --prod
