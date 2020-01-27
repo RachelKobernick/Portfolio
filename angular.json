@@ -138,7 +138,7 @@
         "deploy": {
           "builder": "angular-cli-ghpages:deploy",
           "options": {
-            "base-href": "https://rachelkobernick.github.io/Portfolio/",
+            "base-href": "/Portfolio/",
             "name": "RyanRacicot",
             "email": "ryanmracicot@gmail.com"
           }
