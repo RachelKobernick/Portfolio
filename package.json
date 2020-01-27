@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --prod --base-href=\"/dist/rachel-kobernick-portfolio/\"",
+    "build": "ng build --prod --base-href=\"/Portfolio/dist/rachel-kobernick-portfolio/\"",
     "deploy": "ng deploy --base-href=\"/Portfolio/\"",
     "test": "ng test",
     "lint": "ng lint",
