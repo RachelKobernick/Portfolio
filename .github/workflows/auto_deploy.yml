@@ -11,16 +11,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - uses: actions/checkout@v2
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.12.0
         
-      - name: Use Node.js 12.x
+      - name: Build and Deploy
+        uses: JamesIves/github-pages-deploy-action@releases/v2
         env:
-          GITHUB_TOKEN: '61be3ebf9635203db3e7a41a30a826d799f5b190'
-        run: |
-          cd src
-          npm install
-          cd ..
-          npm install @angular/cli@next
-          ng add angular-cli-ghpages
-          ng deploy --no-silent --name="AutoDeploy" --email="ryanmracicot@gmail.com"
+          ACCESS_TOKEN: '61be3ebf9635203db3e7a41a30a826d799f5b190'
+          BASE_BRANCH: master
+          BRANCH: gh-pages
+          FOLDER: dist/rachel-kobernick-portfolio
+          BUILD_SCRIPT: npm install && npm run build -- --prod
