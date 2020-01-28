@@ -28,28 +28,17 @@ jobs:
       - uses: actions/checkout@v2
         with:
           ref: gh-pages
-      - name: PUSH
-        uses: JamesIves/github-pages-deploy-action@releases/v3
+      - name: Force Rebuild
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  
+        run: |
+          git config --global user.email "ryanmracicot@gmail.com"
+          git config --global user.name "RyanRacicot-AutoDeploy"
+          git commit -m 'Force rebuild of deployed site' --allow-empty
+      - name: Push Changes
+        uses: ad-m/github-push-action@master
         with:
-          ACCESS_TOKEN: '61be3ebf9635203db3e7a41a30a826d799f5b190'
-          BASE_BRANCH: gh-pages
-          BRANCH: gh-pages
-          FOLDER: .
-          
-#       - uses: actions/checkout@v2
-#         with:
-#           ref: gh-pages
-#       - name: Force Rebuild
-#         env:
-#           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  
-#         run: |
-#           git config --global user.email "ryanmracicot@gmail.com"
-#           git config --global user.name "RyanRacicot-AutoDeploy"
-#           git commit -m 'Force rebuild of deployed site' --allow-empty
-#       - name: Push Changes
-#         uses: ad-m/github-push-action@master
-#         with:
-#           github_token: ${{ secrets.GITHUB_TOKEN }}
-#           branch: gh-pages
+          github_token: '61be3ebf9635203db3e7a41a30a826d799f5b190'
+          branch: gh-pages
       
           
