@@ -1,0 +1,58 @@
+@import "../../styles.scss";
+
+$press-kit-display-break-size: 700px;
+
+.black {
+    background-color: black;
+    width: 100%;
+}
+
+.bg {
+    background-color: black;
+    // These are set via directive in HTML to allow for image to be pulled from assets
+    // background-image: url(/assets/pictures/background_black_and_white_blurred.jpg);
+    // background-repeat: no-repeat;
+    // background-size: contain;
+    max-width: 1350px;
+    height: max-content;
+    width: 100%;
+    margin: 0 auto;
+}
+.main {
+    padding: 3em 0;
+    color: white;  
+    height: max-content;
+    position: relative;
+    #left {
+        @media (max-width: $press-kit-display-break-size) {
+            display: none;
+        }
+        position: absolute;
+        height: 100%;
+        top: 40%;
+        left: 5%;
+        padding: auto;
+    }
+
+    #download-links {
+        transform: translateX(25%);
+        @media (max-width: $press-kit-display-break-size) {
+            transform: translateX(0);
+        }
+    }
+    .download-buttons {
+
+        .btn {
+            color: white;
+            background-color: lighten($color: $secondary-accent-color, $amount: 25%);
+            display: block;
+            margin: 2em auto;
+        }
+
+        .btn:hover {
+            color: lighten($color: $secondary-accent-color, $amount: 25%);
+            background-color: white;
+            border: solid lighten($color: $secondary-accent-color, $amount: 25%) 1px;
+        }
+    }
+}
