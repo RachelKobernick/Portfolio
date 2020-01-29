@@ -26,7 +26,6 @@ jobs:
           npm run ng -- deploy --base-href="/Portfolio/" --no-silent
           
       - uses: actions/checkout@v2
-      - name: Checkout gh-pages
         with:
           ref: gh-pages
 
