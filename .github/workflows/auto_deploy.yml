@@ -12,11 +12,11 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - name: Checkout
+      - name: Checkout master
         uses: actions/setup-node@v1
         with:
           node-version: 12.12.0
-      - name: Deploy
+      - name: ng deploy
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BASE_BRANCH: master
@@ -26,27 +26,15 @@ jobs:
           npm run ng -- deploy --base-href="/Portfolio/" --no-silent
           
       - uses: actions/checkout@v2
+      - name: Checkout gh-pages
         with:
           ref: gh-pages
 
-      - name: Deploy
+      - name: Publish Changes
         uses: peaceiris/actions-gh-pages@v2
         env: 
           PERSONAL_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           PUBLISH_DIR: .
           PUBLISH_BRANCH: gh-pages
-
-#       - name: Force Rebuild
-#         env:
-#           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-#         run: |
-#           git config --global user.email "ryanmracicot@gmail.com"
-#           git config --global user.name "RyanRacicot-AutoDeploy"
-#           git commit -m 'Force rebuild of deployed site' --allow-empty
-#       - name: Push Changes
-#         uses: ad-m/github-push-action@master
-#         with:
-#           github_token: '61be3ebf9635203db3e7a41a30a826d799f5b190'
-#           branch: gh-pages
       
           
