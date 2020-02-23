@@ -5,8 +5,12 @@
     color: white;
     background-color: $main-accent-color;
 
+
     a {
         color: white;
+        i {
+            margin: 0 .5em .5em .5em;
+        }
     }
 
     .fab {
